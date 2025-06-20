@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <style>
+        .cart-item { display: flex; align-items: center; margin: 10px 0; }
+        .cart-item img { width: 50px; height: 50px; margin-right: 10px; }
+        .btn-adjust { padding: 3px 6px; margin: 0 5px; }
+    </style>
+</head>
+<body>
+
+<h1>Your Shopping Cart</h1>
+<div id="cart">
+    <div id="cart-items"></div>
+    <p>Total: ₹<span id="cart-total">0</span></p>
+</div>
+<button onclick="clearCart()">Clear Cart</button>
+<button onclick="buyNow()">Buy Now</button>
+
+<script>
+    const products = [
+        {  id: 1, title: "Tangy Chicken Ghee Roast (250g pack)", price: 169.00, img: "./image/daily 1.jpg" },
+        { id: 2, title: "BILTEN Tablet 10's", price: 111.58, img: "apex img/7.jpg" },
+        { id: 3, title: "Acnovate Gel 15gm", price: 109.20, img: "apex img/3.jpg" },
+        { id: 4, title: "ACTON OR PLUS Tablet 10's", price: 153.20, img: "apex img/4.jpg" },
+        { id: 5, title: "Duopep 40mg Tablet 10'S", price: 120.80, img: "apex img/5.jpg" },
+        { id: 6, title: "EVAZEAL SR 300mg Tablet 10's", price: 146.20, img: "apex img/6.jpg" },
+        { id: 7, title: "Lozee Cream 15gm", price: 95.70, img: "apex img/lozee_cream_15gm_0_0.jpg" },
+        { id: 8, title: "P 650 Tablet 10'S", price: 195.70, img: "apex img/8.jpg" },
+        { id: 9, title: "YSCAR Cream 50gm", price: 132.70, img: "apex img/9.jpg" },
+        { id: 10, title: "Zelita 7mg Capsule 10'S", price: 139.20, img: "apex img/10.jpg" },
+        { id: 11, title: "Zincofer XT Tablet 10'S", price: 99.60, img: "apex img/11.jpg" },
+        { id: 12, title: "Zincovit Drops 15ml", price: 145.55, img: "apex img/12.jpg" },
+    ];
+
+    let cartString = localStorage.getItem("cart") || "";
+
+    // Parse the cart string to convert it into an object
+    function parseCartString(cartString) {
+        const cart = {};
+        if (cartString) {
+            cartString.split(";").forEach(item => {
+                const [id, quantity] = item.split(":");
+                if (id && quantity) {
+                    cart[id] = parseInt(quantity);
+                }
+            });
+        }
+        return cart;
+    }
+
+    // Display the cart items and total
+    function displayCart() {
+        const cartItemsContainer = document.getElementById("cart-items");
+        const cartTotal = document.getElementById("cart-total");
+        cartItemsContainer.innerHTML = "";
+
+        const cart = parseCartString(cartString);
+        let total = 0;
+
+        for (const id in cart) {
+            const product = products.find(p => p.id == id);
+            const quantity = cart[id];
+
+            const cartItemDiv = document.createElement("div");
+            cartItemDiv.classList.add("cart-item");
+            cartItemDiv.innerHTML = `
+                <img src="${product.img}" alt="${product.title}">
+                <span>${product.title}</span>
+                <button class="btn-adjust" onclick="changeQuantity(${product.id}, -1)">-</button>
+                <span>x${quantity}</span>
+                <button class="btn-adjust" onclick="changeQuantity(${product.id}, 1)">+</button>
+                <span>₹${(product.price * quantity).toFixed(2)}</span>
+            `;
+            cartItemsContainer.appendChild(cartItemDiv);
+            total += product.price * quantity;
+        }
+
+        cartTotal.innerText = total.toFixed(2);
+    }
+
+    // Change the quantity of a product in the cart
+    function changeQuantity(productId, delta) {
+        const cart = parseCartString(cartString);
+
+        if (cart[productId]) {
+            cart[productId] += delta;
+            if (cart[productId] <= 0) {
+                delete cart[productId];
+            }
+        } else if (delta > 0) {
+            cart[productId] = 1;
+        }
+
+        cartString = Object.entries(cart).map(([id, qty]) => `${id}:${qty}`).join(";");
+        localStorage.setItem("cart", cartString);
+        displayCart();
+    }
+
+    // Clear the cart
+    function clearCart() {
+        cartString = "";
+        localStorage.setItem("cart", cartString);
+        displayCart();
+    }
+
+    // Buy Now function
+    function buyNow() {
+        const cart = parseCartString(cartString);
+        if (Object.keys(cart).length === 0) {
+            alert("Your cart is empty!");
+        } else {
+            alert("Proceeding to checkout!");
+            // Add your checkout process here (e.g., redirect to payment page)
+        }
+    }
+
+    // Initialize the cart display
+    displayCart();
+</script>
+
+</body>
+</html>

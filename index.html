@@ -1,18 +1,20 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <style>
-  .container-fluid{
+  .container-fluid {
     color: white;
   }
-  .l{
+
+  .l {
     list-style-type: none;
     display: inline-flex;
-    
+
   }
-  nav.max{
+
+  nav.max {
     border-top: 1px solid rgb(194, 186, 186);
     border-bottom: 1px solid rgb(194, 186, 186);
-    list-style-type:none;
+    list-style-type: none;
     margin: 0;
     padding: 0;
     font-size: large;
@@ -23,44 +25,54 @@
     /* position: absolute; */
     /* top: 10px; */
   }
-  .AA:hover{
-        background-color: rgb(173, 169, 169);
+
+  .AA:hover {
+    background-color: rgb(173, 169, 169);
   }
-  .cc{
+
+  .cc {
     padding: 10px;
   }
-  .fresh{
-    .fresh {
-    position: sticky;
-    top: 0; /* Use units for proper positioning */
-    z-index: 1020; /* Ensure it's above other elements */
-    
-    }}
-    .mm{
-      color: red;
-    }
-   
-.login{
-  width: 98%;
-  padding: 10px;
-  border: 1px solid ;
-  border-radius: 3px;
-}
 
+  .fresh {
+    .fresh {
+      position: sticky;
+      top: 0;
+      /* Use units for proper positioning */
+      z-index: 1020;
+      /* Ensure it's above other elements */
+
+    }
+  }
+
+  .mm {
+    color: red;
+  }
+
+  .login {
+    width: 98%;
+    padding: 10px;
+    border: 1px solid;
+    border-radius: 3px;
+  }
 </style>
+
 <div class="tom" style="position: fixed;z-index: 1;width: 100%;">
-  <nav class="navbar navbar-expand-lg navbar-light" style="background-color:rgb(10, 155, 10); height: 30px; width: 100%; " >
+  <nav class="navbar navbar-expand-lg navbar-light"
+    style="background-color:rgb(10, 155, 10); height: 30px; width: 100%; ">
     <div class="container-fluid">
       <div class="k">
-      <ul class="navbar-nav">
-        <li class="nav-item" style="font-size: 15px;">
-          <a class="nav-link" href="#"><span style="color: white;"><img src="./image/icons8-phone-30.png" alt="" height="20px" width="20px">&nbsp;1800-313-3302 &nbsp;|</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#"><span style="color: white;"><img src="./image/icons8-mail-30.png" alt="" height="20px" width="20px"> &nbsp;customercare@freshtohome.com</span></a>
-        </li>
+        <ul class="navbar-nav">
+          <li class="nav-item" style="font-size: 15px;">
+            <a class="nav-link" href="#"><span style="color: white;"><img src="./image/icons8-phone-30.png" alt=""
+                  height="20px" width="20px">&nbsp;1800-313-3302 &nbsp;|</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><span style="color: white;"><img src="./image/icons8-mail-30.png" alt=""
+                  height="20px" width="20px"> &nbsp;customercare@freshtohome.com</span></a>
+          </li>
       </div>
-        <div class="l">
+      <div class="l">
         <li class="nav-item">
           <a class="nav-link" href="#">Certificates</a>
         </li>&nbsp;&nbsp;&nbsp;&nbsp;
@@ -79,7 +91,7 @@
   </nav>
   <nav class="fresh navbar-expand-sm bg-light">
     <div class="container-fluid">
-      <ul class="navbar-nav" >
+      <ul class="navbar-nav">
         <li class="nav-item">
           <a class="nav-link" href="#"><img src="./image/logo.webp" alt="" height="70px" width="70px"></a>
         </li>
@@ -89,12 +101,19 @@
               <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
               <button class="btn btn-outline-success" type="submit">Search</button>
             </form>
-            <button type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop" style="margin-left: 650px; border-radius: 10px; border-color: green; border-width: 1px;"><a style="text-decoration: none; color: black;" ><img src="./image/icons8-person-30.png" alt="" >Login</a></button>&nbsp;&nbsp;&nbsp;&nbsp;  <button style="margin-left: 750x; border-radius: 10px; border-color: green; border-width: 1px;"><a style="text-decoration: none; color: black;" ><img src="./image/icons8-cart-30.png" alt="" >Cart</a></button>
+            <button type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
+              style="margin-left: 650px; border-radius: 10px; border: 1px solid green; padding: 6px 12px; background-color: white; color: black; font-size: 16px; display: inline-flex; align-items: center;">
+              <img src="./image/icons8-person-30.png" alt="" style="margin-right: 5px;"> Login
+            </button>
+            <a href="cart.html"
+              style="margin-left: 20px; border-radius: 10px; border: 1px solid green; padding: 6px 12px; background-color: white; color: black; text-decoration: none; display: inline-block;">
+              <img src="./image/icons8-cart-30.png" alt=""> Cart (<span id="cart-count">0</span>)
+            </a>
           </div>
           <div style="display: inline;margin-right: 10px;">
           </div>
         </nav>
-        
+
         <li class="nav-item">
           <a class="nav-link" href="#"></a>
         </li>
@@ -109,11 +128,13 @@
     <li><a style="text-decoration: none; color: rgb(161, 107, 211);" class="AA" href="./chicken.html">Poultry</a></li>
     <li><a style="text-decoration: none; color: rgb(161, 107, 211);" class="AA" href="mutton.html">Mutton</a></li>
     <li><a style="text-decoration: none; color: rgb(161, 107, 211);" class="AA" href="cut.html">Steaks & Fillet</a></li>
-    <li><a style="text-decoration: none; color: rgb(161, 107, 211);" class="AA" href="ready to cook.html">Ready to Cook</a></li>
+    <li><a style="text-decoration: none; color: rgb(161, 107, 211);" class="AA" href="ready to cook.html">Ready to
+        Cook</a></li>
     <li><a style="text-decoration: none; color: rgb(161, 107, 211);" class="AA" href="./veg.html">Vegetarian</a></li>
   </nav>
-  </div>
-<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+</div>
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+  aria-labelledby="staticBackdropLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -121,47 +142,50 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-            <label for="Email">E-mail</label>
-            <input class="login" type="email" Name="email" id="email" placeholder="Enter your Mail Id" required><br><br>
+        <label for="email">E-mail</label>
+        <input class="login" type="email" name="email" id="email" placeholder="Enter your Mail Id" required><br><br>
 
-            <label for="password">Password</label>
-            <input class="login" type="password" name="password" id="password" placeholder="Enter your Password" required><br><br>
+        <label for="password">Password</label>
+        <input class="login" type="password" minlength="2" maxlength="10" name="password" id="password"
+          placeholder="Enter your Password" required><br><br>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-primary">Login</button>
+        <button type="button" class="btn btn-primary" onclick="validateForm()">Login</button>
       </div>
     </div>
   </div>
 </div>
 <br><br><br><br><br><br><br>
 <div class="cc">
-<div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="./image/side1.webp" class="d-block w-100" alt="..." height="450px" width="90%" >
+  <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="./image/side1.webp" class="d-block w-100" alt="..." height="450px" width="90%">
+      </div>
+      <div class="carousel-item">
+        <img src="./image/side2.webp" class="d-block w-100" alt="..." height="450px" width="90%">
+      </div>
+      <div class="carousel-item">
+        <img src="./image/side3.webp" class="d-block w-100" alt="..." height="450px" width="90%">
+      </div>
+      <div class="carousel-item">
+        <img src="./image/side4.webp" class="d-block w-100" alt="..." height="450px" width="90%">
+      </div>
+      <div class="carousel-item">
+        <img src="./image/side5.webp" class="d-block w-100" alt="..." height="450px" width="90%">
+      </div>
     </div>
-    <div class="carousel-item">
-      <img src="./image/side2.webp" class="d-block w-100" alt="..."  height="450px" width="90%">
-    </div>
-    <div class="carousel-item">
-      <img src="./image/side3.webp" class="d-block w-100" alt="..."  height="450px" width="90%">
-    </div>
-    <div class="carousel-item">
-      <img src="./image/side4.webp" class="d-block w-100" alt="..."  height="450px" width="90%">
-    </div>
-    <div class="carousel-item">
-      <img src="./image/side5.webp" class="d-block w-100" alt="..."  height="450px" width="90%">
-    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+      data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+      data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
   </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
 </div>
 <br>
 <div>
@@ -170,84 +194,130 @@
   </center>
 </div>
 <br>
-<div class="card" style="width: 15rem; margin-left: 20px; display: inline-block; padding: 2px; margin-left: 18px; text-align: center;">
-  <a style="text-decoration: none;"href=""><img src="./image/daily 1.jpg" class="card-img-top">
-   <h5 style="color: black;">Tangy Chicken Ghee Roast (250g pack)</h5>
+<div class="card" data id="1" data img="./image/daily 1.jpg"
+  style="width: 235px; margin-left: 20px; display: inline-block; padding: 2px; margin-left: 18px; text-align: center;">
+  <a style="text-decoration: none;" href=""><img src="./image/daily 1.jpg" class="card-img-top">
+    <h5 style="color: black;">Tangy Chicken Ghee Roast (250g pack)</h5>
     <p class="kk" style="color: black;">₹169.00 /pack</p>
-    <p class="mm">Get 15% off on order above Rs.599</p></a>
-  </div>
-<div class="card" style="width: 15rem; margin-left: 20px; display: inline-block; padding: 2px; margin-left: 18px; text-align: center;">
+    <p class="mm">Get 15% off on order above Rs.599</p>
+  </a>
+  <button style="background-color: rgb(0, 217, 255);border-radius: 5px; border-width: 1px;" onclick="goToCartPage">Add
+    To Cart</button>
+</div>
+<div class="card" data id="2"
+  style="width: 235px; margin-left: 20px; display: inline-block; padding: 2px; margin-left: 18px; text-align: center;">
   <a style="text-decoration: none;" href=""><img src="./image/daily 2.jpg" class="card-img-top" alt="...">
     <h5 style="color: black;">Spicy Chettinad Chicken (250g Pack)</h5>
     <p class="kk" style="color: black;">₹155.00 /pack</p>
-    <p class="mm">Get 15% off on order above Rs.599</p></a>  
-  </div>
-<div class="card" style="width: 15rem; margin-left: 20px; display: inline-block; margin-left: 18px; padding: 2px; text-align: center;">
+    <p class="mm">Get 15% off on order above Rs.599</p>
+  </a>
+  <button style="background-color: rgb(0, 217, 255);border-radius: 5px; border-width: 1px;">Add To Cart</button>
+</div>
+<div class="card"
+  style="width: 235px; margin-left: 20px; display: inline-block; margin-left: 18px; padding: 2px; text-align: center;">
   <a style="text-decoration: none;" href=""><img src="./image/daily 3.jpeg" class="card-img-top" alt="...">
     <h5 style="color: black;">Chicken Pepper Salami (200g)</h5>
     <p class="kk" style="color: black;">₹195.00 /pack</p>
-    <p class="mm">Get 15% off on order above Rs.599</p></a>  
-  </div>
-<div class="card" style="width: 15rem; margin-left: 20px; display: inline-block; margin-left: 18px; padding: 2px; text-align: center;">
+    <p class="mm">Get 15% off on order above Rs.599</p>
+  </a>
+  <button style="background-color: rgb(0, 217, 255);border-radius: 5px; border-width: 1px;">Add To Cart</button>
+</div>
+<div class="card"
+  style="width: 235px; margin-left: 20px; display: inline-block; margin-left: 18px; padding: 2px; text-align: center;">
   <a style="text-decoration: none;" href=""><img src="./image/daily 4.jpg" class="card-img-top" alt="...">
     <h5 style="color: black;">DIY Lababdar Gravy (200g Pack)</h5>
     <p class="kk" style="color: black;">₹125.00 /pack</p>
-    <p class="mm">Get 15% off on order above Rs.599 </p></a>  
-  </div>
-<div class="card" style="width: 15rem; margin-right: 40px; display: inline-block; margin-left:19px; padding: 2px; text-align: center;">
+    <p class="mm">Get 15% off on order above Rs.599 </p>
+  </a>
+  <button style="background-color: rgb(0, 217, 255);border-radius: 5px; border-width: 1px;">Add To Cart</button>
+</div>
+<div class="card"
+  style="width: 235px; margin-right: 40px; display: inline-block; margin-left:19px; padding: 2px; text-align: center;">
   <a style="text-decoration: none;" href=""><img src="./image/daily5.jpg" class="card-img-top" alt="...">
     <h5 style="color: black;">Skewered Tandoori Prawns (250g Pack)</h5>
     <p class="kk" style="color: black;">₹325.00 /pack</p>
-    <p class="mm">10% off on this | Code: PRWN10 (TCA)</p></a>  
-  </div>
-  <br>
-  <br>
-  <div>
-    <center>
-    <h1>Shop by Category</h1>
+    <p class="mm">10% off on this | Code: PRWN10 (TCA)</p>
+  </a>
+  <button style="background-color: rgb(0, 217, 255);border-radius: 5px; border-width: 1px;">Add To Cart</button>
+</div>
+<br>
+<br>
+<div>
+  <center>
+    <h1>Shop By Category</h1>
   </center>
-  </div>
-  <br>
-  <div class="" style="width: 18rem; text-align: center; margin-left: 200px; height: 180px; width: 180px; display: inline-block;">
-   <a style="text-decoration: none; color: black;"  href="fish.html"> <img src="./image/fish.jfif" class="card-img-top" alt="...">
+</div>
+<br>
+<div class=""
+  style="width: 18rem; text-align: center; margin-left: 200px; height: 180px; width: 180px; display: inline-block;">
+  <a style="text-decoration: none; color: black;" href="fish.html"> <img src="./image/fish.jfif" class="card-img-top"
+      alt="...">
     <div class="card-body">
-     <b><p class="card-text">Fish & Seafood</p></b> </a>
-    </div>
-  </div>
-  <div class="" style="width: 18rem; text-align: center; margin-left: 200px; height: 180px; width: 180px; display: inline-block;">
-    <a style="text-decoration: none; color: black;"  href="chicken.html"> <img src="./image/chicken.jfif" class="card-img-top" alt="...">
-     <div class="card-body">
-      <b><p class="card-text">Poultry</p></b> </a>
-     </div>
-   </div>
-   <div class="" style="width: 18rem; text-align: center; margin-left: 200px; height: 180px; width: 180px; display: inline-block;">
-    <a style="text-decoration: none; color: black;"  href="mutton.html"> <img src="./image/mutton.jfif" class="card-img-top" alt="...">
-     <div class="card-body">
-      <b><p class="card-text">Mutton - Goat & Lamb</p></b> </a>
-     </div>
-   </div>
-   <br><br><br> 
-   <div class="" style="width: 18rem; text-align: center; margin-left: 200px; height: 180px; width: 180px; display: inline-block;">
-    <a style="text-decoration: none; color: black;"  href="ready to cook.html"> <img src="./image/ready.jfif" class="card-img-top" alt="...">
-     <div class="card-body">
-      <b><p class="card-text">Ready to Cook</p></b> </a>
-     </div>
-   </div>
-   <div class="" style="width: 18rem; text-align: center; margin-left: 200px; height: 180px; width: 180px; display: inline-block;">
-    <a style="text-decoration: none; color: black;"  href="./cut.html"> <img src="./image/combo.jfif" class="card-img-top" alt="...">
-     <div class="card-body">
-      <b><p class="card-text">Steaks & Fillets</p></b> </a>
-     </div>
-   </div>
-   
-   <div class="" style="width: 18rem; text-align: center; margin-left: 200px; height: 180px; width: 180px; display: inline-block;">
-    <a style="text-decoration: none; color: black;"  href="./veg.html"> <img src="./image/veg.jfif" class="card-img-top" alt="...">
-     <div class="card-body">
-      <b><p class="card-text">Vegetarian Products</p></b> </a>
-     </div>
-   </div>
-   <br><br>
-   <br><br>
+      <b>
+        <p class="card-text">Fish & Seafood</p>
+      </b>
+  </a>
+</div>
+</div>
+<div class=""
+  style="width: 18rem; text-align: center; margin-left: 200px; height: 180px; width: 180px; display: inline-block;">
+  <a style="text-decoration: none; color: black;" href="chicken.html"> <img src="./image/chicken.jfif"
+      class="card-img-top" alt="...">
+    <div class="card-body">
+      <b>
+        <p class="card-text">Poultry</p>
+      </b>
+  </a>
+</div>
+</div>
+<div class=""
+  style="width: 18rem; text-align: center; margin-left: 200px; height: 180px; width: 180px; display: inline-block;">
+  <a style="text-decoration: none; color: black;" href="mutton.html"> <img src="./image/mutton.jfif"
+      class="card-img-top" alt="...">
+    <div class="card-body">
+      <b>
+        <p class="card-text">Mutton - Goat & Lamb</p>
+      </b>
+  </a>
+</div>
+</div>
+<br><br><br>
+<div class=""
+  style="width: 18rem; text-align: center; margin-left: 200px; height: 180px; width: 180px; display: inline-block;">
+  <a style="text-decoration: none; color: black;" href="ready to cook.html"> <img src="./image/ready.jfif"
+      class="card-img-top" alt="...">
+    <div class="card-body">
+      <b>
+        <p class="card-text">Ready to Cook</p>
+      </b>
+  </a>
+</div>
+</div>
+<div class=""
+  style="width: 18rem; text-align: center; margin-left: 200px; height: 180px; width: 180px; display: inline-block;">
+  <a style="text-decoration: none; color: black;" href="./cut.html"> <img src="./image/combo.jfif" class="card-img-top"
+      alt="...">
+    <div class="card-body">
+      <b>
+        <p class="card-text">Steaks & Fillets</p>
+      </b>
+  </a>
+</div>
+</div>
+
+<div class=""
+  style="width: 18rem; text-align: center; margin-left: 200px; height: 180px; width: 180px; display: inline-block;">
+  <a style="text-decoration: none; color: black;" href="./veg.html"> <img src="./image/veg.jfif" class="card-img-top"
+      alt="...">
+    <div class="card-body">
+      <b>
+        <p class="card-text">Vegetarian Products</p>
+      </b>
+  </a>
+</div>
+</div>
+<br><br>
+<br><br>
 <div>
   <center>
     <h2 style="color: black;">Deal Of The Day - Chennai</h2>
@@ -255,61 +325,69 @@
 </div>
 <br>
 <div class="card"
-  style="width: 15rem; margin-left: 20px; display: inline-block; padding: 2px; margin-left: 18px; text-align: center;">
+  style="width: 235px; margin-left: 20px; display: inline-block; padding: 2px; margin-left: 18px; text-align: center;">
   <a style="text-decoration: none;" href=""><img src="./image/home1.jpg" class="card-img-top">
     <h6 style="color: black;">Premium Sardine / Mathi (Small) (45+ Count)</h6>&nbsp;
     <p class="kk" style="color: rgb(58, 216, 58);">₹149.00 /pack</p>
     <!-- <p class="mm">Get 15% off on order above Rs.599</p></a> -->
+    <button style="background-color: rgb(0, 217, 255);border-radius: 5px; border-width: 1px;">Add To Cart</button>
 </div>
 <div class="card"
-  style="width: 15rem; margin-left: 20px; display: inline-block; padding: 2px; margin-left: 18px; text-align: center;">
+  style="width: 235px; margin-left: 20px; display: inline-block; padding: 2px; margin-left: 18px; text-align: center;">
   <a style="text-decoration: none;" href=""><img src="./image/home2.jpeg" class="card-img-top" alt="...">
     <h6 style="color: black;">Whole Cleaned with Partial Head (230g to 250g Pack)</h6>&nbsp;
     <p class="kk" style="color: rgb(58, 216, 58);">₹145.00 /pack</p>
     <!-- <p class="mm">Get 15% off on order above Rs.599</p></a>   -->
+    <button style="background-color: rgb(0, 217, 255);border-radius: 5px; border-width: 1px;">Add To Cart</button>
 </div>
 <div class="card"
-  style="width: 15rem; margin-left: 20px; display: inline-block; margin-left: 18px; padding: 2px; text-align: center;">
+  style="width: 235px; margin-left: 20px; display: inline-block; margin-left: 18px; padding: 2px; text-align: center;">
   <a style="text-decoration: none;" href=""><img src="./image/home3.jpg" class="card-img-top" alt="...">
     <h6 style="color: black;">Whole Cleaned (480g to 500g Pack)</h6>&nbsp;
     <p class="kk" style="color: rgb(58, 216, 58);">₹295.00 /pack</p>
     <!-- <p class="mm">Get 15% off on order above Rs.599</p></a>   -->
+    <button style="background-color: rgb(0, 217, 255);border-radius: 5px; border-width: 1px;">Add To Cart</button>
 </div>
 <div class="card"
-  style="width: 15rem; margin-left: 20px; display: inline-block; margin-left: 18px; padding: 2px; text-align: center;">
+  style="width: 235px; margin-left: 20px; display: inline-block; margin-left: 18px; padding: 2px; text-align: center;">
   <a style="text-decoration: none;" href=""><img src="./image/home4.jpg" class="card-img-top" alt="...">
     <h6 style="color: black;">Asian Seabass / Kalanji - Steak Cut (280g to 300g Pack)</h6>&nbsp;
     <p class="kk" style="color: rgb(58, 216, 58);">₹444.00 /pack</p>
     <!-- <p class="mm">Get 15% off on order above Rs.599 </p></a>   -->
+    <button style="background-color: rgb(0, 217, 255);border-radius: 5px; border-width: 1px;">Add To Cart</button>
 </div>
 <div class="card"
-  style=" width: 15rem; margin-right: 40px; display: inline-block; margin-left:18px; padding: 2px; text-align: center;">
+  style=" width: 235px; margin-right: 40px; display: inline-block; margin-left:18px; padding: 2px; text-align: center;">
   <a style="text-decoration: none;" href=""><img src="./image/home5.jpeg" class="card-img-top" alt="...">
     <h6 style="color: black;">Andhra Spicy Green Chilli Chicken (300g Pack)</h6>&nbsp;&nbsp;
     <p class="kk" style="color: rgb(58, 216, 58);">₹179.00 /pack</p>
     <!-- <p class="mm">10% off on this | Code: PRWN10 (TCA)</p></a>   -->
+    <button style="background-color: rgb(0, 217, 255);border-radius: 5px; border-width: 1px;">Add To Cart</button>
 </div>
 <br><br>
 <div class="card"
-  style="width: 15rem; margin-left: 20px; display: inline-block; padding: 2px; margin-left: 18px; text-align: center;">
+  style="width: 235px; margin-left: 20px; display: inline-block; padding: 2px; margin-left: 18px; text-align: center;">
   <a style="text-decoration: none;" href=""><img src="./image/home6.jpg" class="card-img-top">
     <h6 style="color: black;">BoneleChicken Supreme / Tenderloin (500g Pack)</h6>&nbsp;
     <p class="kk" style="color: rgb(58, 216, 58);">₹298.00 /pack</p>
     <!-- <p class="mm">Get 15% off on order above Rs.599</p></a> -->
+    <button style="background-color: rgb(0, 217, 255);border-radius: 5px; border-width: 1px;">Add To Cart</button>
 </div>
 <div class="card"
-  style="width: 15rem; margin-left: 20px; display: inline-block; padding: 2px; margin-left: 18px; text-align: center;">
+  style="width: 235px; margin-left: 20px; display: inline-block; padding: 2px; margin-left: 18px; text-align: center;">
   <a style="text-decoration: none;" href=""><img src="./image/home7.jpg" class="card-img-top" alt="...">
     <h6 style="color: black;"> Asian Seabass / Kalanji - Steaks (480g to 500g Pack)</h6>&nbsp;
     <p class="kk" style="color: rgb(58, 216, 58);">₹712.00 /pack</p>
     <!-- <p class="mm">Get 15% off on order above Rs.599</p></a>   -->
+    <button style="background-color: rgb(0, 217, 255);border-radius: 5px; border-width: 1px;">Add To Cart</button>
 </div>
 <div class="card"
-  style="width: 15rem; margin-left: 20px; display: inline-block; padding: 2px; margin-left: 18px; text-align: center;">
+  style="width: 235px; margin-left: 20px; display: inline-block; padding: 2px; margin-left: 18px; text-align: center;">
   <a style="text-decoration: none;" href=""><img src="./image/home8.jpg" class="card-img-top" alt="...">
     <h6 style="color: black;">Premium Tender Lamb - Curry Cut Bone-in & Boneless</h6>&nbsp;
     <p class="kk" style="color: rgb(58, 216, 58);">₹199.00 /pack</p>
     <!-- <p class="mm">Get 15% off on order above Rs.599</p></a>   -->
+    <button style="background-color: rgb(0, 217, 255);border-radius: 5px; border-width: 1px;">Add To Cart</button>
 </div>
 <br>
 <br>
@@ -317,12 +395,14 @@
 <br>
 <br>
 <br>
-<footer class="footer" >
+<footer class="footer">
   <div class="card-group" style="width: 100%;">
     <div class="card">
-      <img src="./image/logo.webp" class="" alt="" height="100px" width="100px" style="margin-left: 20px; margin-top: 20px;">
+      <img src="./image/logo.webp" class="" alt="" height="100px" width="100px"
+        style="margin-left: 20px; margin-top: 20px;">
       <div class="card-body">
-        <p class="card-text" style="font-size: 18px;">Freshtohome Foods Private Limited No. 1, 2nd Floor, Carlton Towers, Old Airport Road, Bangalore - 560008</p>
+        <p class="card-text" style="font-size: 18px;">Freshtohome Foods Private Limited No. 1, 2nd Floor, Carlton
+          Towers, Old Airport Road, Bangalore - 560008</p>
         <p class="card-text"><small class="text-body-secondary"></small></p>
       </div>
     </div>
@@ -332,45 +412,114 @@
         <p>
           <center>
             FAQ&nbsp;&nbsp;&nbsp;
-          •&nbsp;&nbsp;&nbsp;News room&nbsp;&nbsp;&nbsp;
-          •&nbsp;&nbsp;&nbsp;Blog&nbsp;&nbsp;&nbsp;
-          •&nbsp;&nbsp;&nbsp;Didn't find your product?&nbsp;&nbsp;&nbsp;
-          •<br>&nbsp;&nbsp;&nbsp;Terms and Conditions&nbsp;&nbsp;&nbsp;
-          •&nbsp;&nbsp;&nbsp;Privacy Policy&nbsp;&nbsp;&nbsp;
-          •&nbsp;&nbsp;&nbsp;Refund Policy&nbsp;&nbsp;&nbsp;<br>
-          •&nbsp;&nbsp;&nbsp;Contact Us&nbsp;&nbsp;&nbsp;
-        </center>
+            •&nbsp;&nbsp;&nbsp;News room&nbsp;&nbsp;&nbsp;
+            •&nbsp;&nbsp;&nbsp;Blog&nbsp;&nbsp;&nbsp;
+            •&nbsp;&nbsp;&nbsp;Didn't find your product?&nbsp;&nbsp;&nbsp;
+            •<br>&nbsp;&nbsp;&nbsp;Terms and Conditions&nbsp;&nbsp;&nbsp;
+            •&nbsp;&nbsp;&nbsp;Privacy Policy&nbsp;&nbsp;&nbsp;
+            •&nbsp;&nbsp;&nbsp;Refund Policy&nbsp;&nbsp;&nbsp;<br>
+            •&nbsp;&nbsp;&nbsp;Contact Us&nbsp;&nbsp;&nbsp;
+          </center>
         </p>
         <center>
           <img src="./image/appstore.webp" alt="" height="40px" width="130px">
-        <img src="./image/playstore.webp" alt="" height="60px" width="160px">
+          <img src="./image/playstore.webp" alt="" height="60px" width="160px">
         </center><br>
         <p>
           Order your daily Fish, Poultry and Mutton. Get it delivered at your door steps.
         </p>
-       
-      
+
+
       </div>
     </div>
     <div class="card">
       <div class="card-body">
         <h5 class="card-title"></h5>
-        
-        <center><p class="card-text"><span style="font-weight: bold; font-size: large;">Contact Us</span><br><br>
-          1800-313-3302<br>
-          customercare@freshtohome.com</p></center>
-          <br><br>
-          <center><span style="font-weight: bold; font-size: large;">Follow Us</span></center><br>
-          
+
+        <center>
+          <p class="card-text"><span style="font-weight: bold; font-size: large;">Contact Us</span><br><br>
+            1800-313-3302<br>
+            customercare@freshtohome.com</p>
+        </center>
+        <br><br>
+        <center><span style="font-weight: bold; font-size: large;">Follow Us</span></center><br>
+
         <center>
           <img src="./image/facebook-brands-solid.svg" alt="" height="30px" width="30px">&nbsp;&nbsp;&nbsp;&nbsp;
           <img src="./image/twitter-brands-solid.svg" alt="" height="30px" width="30px">&nbsp;&nbsp;&nbsp;&nbsp;
           <img src="./image/instagram-brands-solid.svg" alt="" height="30px" width="30px">&nbsp;&nbsp;&nbsp;&nbsp;
           <img src="./image/youtube-brands-solid.svg" alt="" height="30px" width="30px">
         </center>
-          
+
       </div>
     </div>
   </div>
 </footer>
 <br><br><br>
+<script>
+  function validateForm() {
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!emailPattern.test(email)) {
+      alert('Please enter a valid email address.');
+      return;
+    } P
+
+    if (password.length < 2 || password.length > 10) {
+      alert('Password must be between 2 and 10 characters.');
+      return;
+    }
+
+    alert('Form submitted successfully!');
+  }
+
+
+
+  // Product array to store product details
+  const products = [
+    { id: 1, title: "Tangy Chicken Ghee Roast (250g pack)", price: 169.00, img: "./image/daily 1.jpg" },
+    { id: 2, title: "Spicy Chettinad Chicken (250g Pack)", price: 155.00, img: "apex img/7.jpg" },
+    { id: 3, title: "Acnovate Gel 15gm", price: 109.20, img: "apex img/3.jpg" },
+    { id: 4, title: "ACTON OR PLUS Tablet 10's", price: 153.20, img: "apex img/4.jpg" },
+    { id: 5, title: "Duopep 40mg Tablet 10'S", price: 120.80, img: "apex img/5.jpg" },
+    { id: 6, title: "EVAZEAL SR 300mg Tablet 10's", price: 146.20, img: "apex img/6.jpg" },
+    { id: 7, title: " Lozee Cream 15gm", price: 95.70, img: "apex img/lozee_cream_15gm_0_0.jpg" },
+    { id: 8, title: "P 650 Tablet 10'S", price: 195.70, img: "apex img/8.jpg" },
+    { id: 9, title: "YSCAR Cream 50gm", price: 132.70, img: "apex img/9.jpg" },
+    { id: 10, title: "Zelita 7mg Capsule 10'S", price: 139.20, img: "apex img/10.jpg" },
+    { id: 11, title: "Zincofer XT Tablet 10'S", price: 99.60, img: "apex img/11.jpg" },
+    { id: 12, title: "Zincovit Drops 15ml", price: 145.55, img: "apex img/12.jpg" },
+  ];
+
+  // Function to add a product to the cart
+  function addToCart(productId) {
+    // Retrieve cart data from localStorage or set as an empty string if not found
+    let cartString = localStorage.getItem("cart") || "";
+
+    // Check if the product is already in the cart
+    const regex = new RegExp(`${productId}:(\\d+)`);
+    const match = cartString.match(regex);
+
+    if (match) {
+      // If product exists in the cart, increment its quantity
+      const currentQuantity = parseInt(match[1]);
+      cartString = cartString.replace(regex, `${productId}:${currentQuantity + 1}`);
+    } else {
+      // If product is not in the cart, add it with quantity 1
+      cartString += `${cartString ? ";" : ""}${productId}:1`;
+    }
+
+    // Save the updated cart string back to localStorage
+    localStorage.setItem("cart", cartString);
+
+    alert("Product added to cart");
+  }
+
+  // Redirect to the cart page
+  function goToCartPage() {
+    window.location.href = "cart.html";
+  }
+
+</script>
